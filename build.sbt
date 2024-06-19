@@ -1,17 +1,14 @@
-name := """scala-play-hello-world"""
-organization := "com.artemas.demo"
+import Dependencies._
 
-version := "1.0-SNAPSHOT"
+ThisBuild / scalaVersion     := "2.13.12"
+ThisBuild / version          := "0.1.0-SNAPSHOT"
+ThisBuild / organization     := "com.example"
+ThisBuild / organizationName := "example"
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+lazy val root = (project in file("."))
+  .settings(
+    name := "scala-play-hello-world",
+    libraryDependencies += munit % Test
+  )
 
-scalaVersion := "2.13.11"
-
-libraryDependencies += guice
-libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test
-
-// Adds additional packages into Twirl
-//TwirlKeys.templateImports += "com.artemas.demo.controllers._"
-
-// Adds additional packages into conf/routes
-// play.sbt.routes.RoutesKeys.routesImport += "com.artemas.demo.binders._"
+// See https://www.scala-sbt.org/1.x/docs/Using-Sonatype.html for instructions on how to publish to Sonatype.
