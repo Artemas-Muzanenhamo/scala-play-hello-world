@@ -1,5 +1,9 @@
-import sbt._
+import sbt.*
 
 object Dependencies {
-  lazy val munit = "org.scalameta" %% "munit" % "0.7.29"
+
+  lazy val test: Seq[ModuleID] = Seq(
+    "org.scalameta" %% "munit" % "1.0.0" % Test
+  )
+
 }
