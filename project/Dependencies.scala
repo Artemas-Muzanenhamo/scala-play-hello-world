@@ -3,7 +3,7 @@ import sbt.*
 object Dependencies {
 
   lazy val test: Seq[ModuleID] = Seq(
-    "org.scalameta" %% "munit" % "1.0.0" % Test
+    "org.scalatestplus" %% "junit-5-10" % "3.2.18.0" % "test"
   )
 
 }
