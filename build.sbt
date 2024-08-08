@@ -6,5 +6,5 @@ ThisBuild / organizationName := "example"
 lazy val root = (project in file("."))
   .settings(
     name := "scala-play-hello-world",
-    libraryDependencies ++= Dependencies.test
+    libraryDependencies := Dependencies.compile ++ Dependencies.test
   )
