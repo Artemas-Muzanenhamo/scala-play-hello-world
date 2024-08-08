@@ -5,12 +5,8 @@ import play.api.mvc.{AbstractController, AnyContent, ControllerComponents, Reque
 import javax.inject.{Inject, Singleton}
 
 @Singleton
-class HelloController @Inject()(cc: ControllerComponents) extends AbstractController(cc) with Greeting {
-  def index() = Action { implicit request: Request[AnyContent] =>
-    Ok(greeting)
+class HelloController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
+  def greeting() = Action { implicit request: Request[AnyContent] =>
+    Ok("hello")
   }
-}
-
-trait Greeting {
-  lazy val greeting: String = "hello"
 }
