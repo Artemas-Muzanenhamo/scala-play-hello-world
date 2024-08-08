@@ -7,5 +7,5 @@ lazy val root = (project in file("."))
   .enablePlugins(PlayScala)
   .settings(
     name := "scala-play-hello-world",
-    libraryDependencies := Dependencies.compile ++ Dependencies.test
+    libraryDependencies ++= Dependencies.compile ++ Dependencies.test
   )
