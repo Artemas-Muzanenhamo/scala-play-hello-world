@@ -1,4 +1,4 @@
-package example
+package controllers
 
 object HelloController extends Greeting with App {
   println(greeting)

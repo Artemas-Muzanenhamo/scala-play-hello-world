@@ -1,9 +1,10 @@
+import play.sbt.PlayImport.guice
 import sbt.*
 
 object Dependencies {
 
   lazy val compile: Seq[ModuleID] = Seq(
-    "com.google.code.guice" % "guice" % "1.0"
+    guice
   )
 
   lazy val test: Seq[ModuleID] = Seq(
