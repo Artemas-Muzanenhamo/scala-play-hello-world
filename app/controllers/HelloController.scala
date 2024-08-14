@@ -1,12 +1,12 @@
 package controllers
 
-import play.api.mvc.{AbstractController, AnyContent, ControllerComponents, Request}
+import play.api.mvc.{BaseController, ControllerComponents}
 
 import javax.inject.{Inject, Singleton}
 
 @Singleton
-class HelloController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
-  def greeting() = Action { implicit request: Request[AnyContent] =>
-    Ok("hello")
+class HelloController @Inject()(val controllerComponents: ControllerComponents) extends BaseController {
+  def greeting() = Action {
+    Ok("Hello")
   }
 }
