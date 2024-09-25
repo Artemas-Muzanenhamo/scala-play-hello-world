@@ -1,5 +1,6 @@
 package controllers
 
+import models.Greeting
 import org.scalatest.matchers.must.Matchers.mustBe
 import org.scalatestplus.play.PlaySpec
 import play.api.http.Status.OK
@@ -17,7 +18,8 @@ class HelloControllerSpec extends PlaySpec with Results {
 
       status(result) mustBe OK
       val bodyJsonValue: JsValue = contentAsJson(result)
-      bodyJsonValue mustBe Json.parse("{\"greeting\": \"Hello\"}")
+      private val expectedValue: JsValue = Json.toJson(new Greeting("Hello"))
+      bodyJsonValue mustBe expectedValue
     }
   }
 
