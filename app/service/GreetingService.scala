@@ -1,5 +1,9 @@
 package service
 
-class GreetingService {
-  def sayHello = "Hello"
+import com.google.inject.{Inject, Singleton}
+import connectors.GreetingConnector
+
+@Singleton
+class GreetingService @Inject() (val greetingConnector: GreetingConnector) {
+  def sayHello: String = greetingConnector.retrieveHelloGreeting
 }

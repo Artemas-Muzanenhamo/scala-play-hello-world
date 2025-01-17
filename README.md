@@ -6,8 +6,21 @@
 sbt compile
 ```
 
-## To run tests on the app
+## To run unit tests on the app
 
 ```bash
 sbt test
+```
+
+## To run integration tests on the app
+
+```bash
+sbt integration/test
+```
+
+## To run all the tests on the app
+
+```bash
+
+sbt test integration/test
 ```
