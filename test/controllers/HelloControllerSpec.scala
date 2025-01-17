@@ -24,6 +24,6 @@ class HelloControllerSpec extends PlaySpec with Results {
   }
 
   trait TestSetup {
-    val controller = new HelloController(Helpers.stubControllerComponents())
+    val controller = HelloController(Helpers.stubControllerComponents())
   }
 }
