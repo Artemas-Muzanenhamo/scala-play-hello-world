@@ -1,0 +1,28 @@
+// Google Store
+ 
+"""
+  |{
+  |  "someKey": "someValue",
+  |  "someKey": "someValue",
+  |  "someKey": "someValue",
+  |  "someKey": "someValue",
+  |  "someKey": "someValue",
+  |  "someKey": "someValue",
+  |  "someKey": "someValue",
+  |  "someKey": "someValue",
+  |  "someKey": "someValue"
+  |}
+  |""".stripMargin
+
+// AWS Store
+  |[
+  |  {"someKey": "someValue"},
+  |  {"someKey": "someValue"},
+  |  {"someKey": "someValue"},
+  |  {"someKey": "someValue"},
+  |  {"someKey": "someValue"},
+  |  {"someKey": "someValue"},
+  |  {"someKey": "someValue"},
+  |  {"someKey": "someValue"}
+  |]
+  |""".stripMargin
