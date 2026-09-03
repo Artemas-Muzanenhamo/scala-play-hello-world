@@ -1,1 +1,1 @@
-GET        /                           controllers.HelloController.greeting()
+GET        /                           movie.MovieController.getJamesBond()

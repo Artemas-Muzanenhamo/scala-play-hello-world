@@ -1,4 +1,4 @@
-package greeting
+package movie
 
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers.shouldBe
@@ -12,7 +12,7 @@ import play.api.libs.ws.{WSClient, WSRequest}
 import play.api.test.Helpers.{await, defaultAwaitTimeout}
 import play.api.{Application, Environment, Mode}
 
-class GreetingSpec extends AnyFlatSpec with GuiceOneServerPerSuite with BeforeAndAfterEach with BeforeAndAfterAll {
+class MovieISpec extends AnyFlatSpec with GuiceOneServerPerSuite with BeforeAndAfterEach with BeforeAndAfterAll {
   lazy val client: WSClient = app.injector.instanceOf[WSClient]
 
   override implicit lazy val app: Application = new GuiceApplicationBuilder()
